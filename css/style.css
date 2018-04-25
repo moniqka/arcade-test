@@ -1,0 +1,70 @@
+body {
+    text-align: center;
+}
+.container {
+	margin-top: 20px;
+	font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/** styles for the score panel **/
+.score-panel {
+    width: 505px;
+    margin-bottom: -60px;
+    flex-direction: row;
+}
+.points {
+    float: right;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+.hearts {
+	float: left;
+    margin-top: -20px;
+    padding-left: 0;
+    display: inline-block;
+}
+
+.hearts li {
+	float: left;
+    list-style: none;
+    display: inline-block;
+}
+
+.hearts img {
+	width: 30px;
+}
+.hidden {
+    opacity: 0.2;
+}
+.score-panel::after {
+    clear: both;
+}
+
+/** the end game modal styles **/
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 5vw;
+    padding-top: 2vw;
+    padding-bottom: 3vw;
+    width: 50%;
+    text-align: center;
+}

@@ -32,6 +32,7 @@ var Engine = (function(global) {
     let livesPanel = document.querySelector('.hearts');
     let hearts = livesPanel.querySelectorAll('li');
     let modal1 = document.getElementById('game-over');
+    let modal2 = document.getElementById('win');
 
     /* This function serves as the kickoff point for the game loop itself
      * and handles properly calling the update and render methods.
@@ -86,6 +87,7 @@ var Engine = (function(global) {
          updateEntities(dt);
          reachWaterCondition();
          checkCollisions();
+         winGame();
     }
 
     /* This is called by the update function and loops through all of the
@@ -152,7 +154,22 @@ var Engine = (function(global) {
          modal1.style.display = "none";
          init();
          });
+         const restartBtn2 = document.querySelector('#restart-btn2'); 
+         restartBtn2.addEventListener("click", function(){
+         modal2.style.display = "none";
+         init();
+         });
      } 
+
+     function winGame() {
+         if (player.y < 0 && player.points >= 20) {
+             resetPosition()
+             document.removeEventListener('keyup', listen);
+             document.getElementById('win-score').innerHTML = `${player.points}`;
+             modal2.style.display = 'block';  
+             playAgain();
+         }
+     }
 
     /* This function initially draws the "game level", it will then call
      * the renderEntities function. Remember, this function is called every

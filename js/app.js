@@ -69,12 +69,12 @@ class Player {
         let livesPanel = document.querySelector('.hearts');
         let hearts = livesPanel.querySelectorAll('li');
 
-        if (livesPanel.lastElementChild.classList == 'hidden') {
-             livesPanel.lastElementChild.previousElementSibling.classList.add('hidden');
-        } else if (livesPanel.lastElementChild.previousElementSibling.classList == 'hidden') { 
-             livesPanel.firstElementChild.classList.add('hidden');
-        } else { 
+        if (player.lives == 3) {
              livesPanel.lastElementChild.classList.add('hidden');
+        } else if (player.lives == 2) { 
+             livesPanel.lastElementChild.previousElementSibling.classList.add('hidden');
+        } else { 
+             livesPanel.firstElementChild.classList.add('hidden');
         }
         this.lives --;
     }

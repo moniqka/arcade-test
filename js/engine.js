@@ -163,10 +163,10 @@ var Engine = (function(global) {
 
      function winGame() {
          if (player.y < 0 && player.points >= 20) {
-             resetPosition()
+             modal2.style.display = 'block';
              document.removeEventListener('keyup', listen);
              document.getElementById('win-score').innerHTML = `${player.points}`;
-             modal2.style.display = 'block';  
+             resetPosition();
              playAgain();
          }
      }

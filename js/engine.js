@@ -161,7 +161,7 @@ var Engine = (function(global) {
          });
      } 
 
-     function winGame() {
+     function winGame(e) {
          if (player.y < 0 && player.points >= 20) {
              modal2.style.display = 'block';
              document.removeEventListener('keyup', listen);

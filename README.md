@@ -1,6 +1,19 @@
-frontend-nanodegree-arcade-game
-===============================
+# Classic Arcade Game (Frogger) 
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+This is a basic Arcade Game. The project was made for Udacity Front-End program as a part of Google Developer Nanodegree Scholarship.
+Game engine, basic art assets and starter code were provided by Udacity.
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+## Instruction
+
+You can play the game by opening this link https://moniqka.github.io/arcade-test/.
+
+To start click on the "Play Game" button. Use the arrow keys on the keyboard to move (player can move in all directions)
+The objective of the game is to cross the road and avoid the bugs. Each time the plaer reaches water 10 points are added.
+To win the game the player needs to earn 100 points.
+
+## Features
+
+### Hearts
+The player has 3 extra lives. Once the player collides with an enemy, loses one life and is moved back to the start position. When the last life is lost, the game is over.
+
+### More features coming soon...

@@ -144,13 +144,13 @@ var Engine = (function(global) {
      function gameOver() {
          modal1.style.display = 'block';  
          document.getElementById('final-score').innerHTML = `${player.points}`;
-         document.removeEventListener('keyup', listen);
+         removeListeners();
          playAgain();
      }
 
      function playAgain(e){
-         const restartBtn = document.querySelector('#restart-btn'); 
-         restartBtn.addEventListener("click", function(){
+         const restartBtn1 = document.querySelector('#restart-btn'); 
+         restartBtn1.addEventListener("click", function(){
          modal1.style.display = "none";
          init();
          });
@@ -162,9 +162,9 @@ var Engine = (function(global) {
      } 
 
      function winGame(e) {
-         if (player.y < 0 && player.points >= 20) {
+         if (player.y < 0 && player.points >= 100) {
              modal2.style.display = 'block';
-             document.removeEventListener('keyup', listen);
+             removeListeners();
              document.getElementById('win-score').innerHTML = `${player.points}`;
              resetPosition();
              playAgain();

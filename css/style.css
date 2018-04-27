@@ -103,6 +103,13 @@ h1 {
     margin-bottom: -60px;
 }
 
+#instruction {
+    list-style: none;
+    font-family: none;
+    padding-right: 30px;
+}
+
+
 button {
     margin-top: 1vw;
     padding: 0.5em;

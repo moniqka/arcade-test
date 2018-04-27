@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet"> 
 </head>
-<body>
+<body onload="newGame()">
 <div class="container">
      
         <section class="score-panel">
@@ -21,6 +21,20 @@
             <div class ="points">Your score: <span class="score">0</span></div>
         </section>
  
+ <div id="new-game" class="modal">
+          <!-- modal window -->
+          <div class="modal-content">
+              <h1>NEW GAME</h1>
+              <h3>Please read instruction...</h3>
+              <ul id="instruction">
+                    <li>Move the player using arrow keys.</li>
+                    <li>To win the game the player has to reach the water and earn <strong>100 points</strong>.</li>
+                    <li>The player has 3 extra lives (hearts) </li>
+                    <li>Player looses life after collision with a bug.</li>
+                </ul>
+              <button id="play-btn">Play Game</button>
+          </div>
+    </div>
 
     <div id="game-over" class="modal">
           <!-- modal window -->

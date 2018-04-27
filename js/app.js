@@ -1,6 +1,7 @@
 
 
 let counter = document.querySelector('.score');
+let modal = document.getElementById('new-game');
 
 class Enemy {
     constructor(x, y, speed) {
@@ -126,6 +127,7 @@ const allEnemies =
         enemy3 = new Enemy(-100, 230),
         enemy4 = new Enemy(0, 145),
     ];
+
 const player = new Player(200, 400);
 
 // This listens for key presses and sends the keys to your
@@ -152,3 +154,18 @@ function getRandomInt(min, max) {
 function removeListeners() {
     document.removeEventListener('keyup', listen);
 };
+
+function newGame() {
+    modal.style.display = 'block';
+    removeListeners();
+    play();
+}
+
+function play() {
+    const restartBtn = document.querySelector('#play-btn'); 
+         restartBtn.addEventListener("click", function(){
+         modal.style.display = "none";
+         document.addEventListener('keyup', listen);
+         init();
+         });
+}

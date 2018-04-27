@@ -1,13 +1,14 @@
 body {
     text-align: center;
 }
+
 h1 {
     color: #424cd6;
 }
 
 .container {
-	margin-top: 20px;
-	font-family: 'Press Start 2P', cursive;
+    margin-top: 20px;
+    font-family: 'Press Start 2P', cursive;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,34 +26,31 @@ h1 {
     font-size: 1em;
 }
 .hearts {
-	float: left;
+    float: left;
     margin-top: -20px;
     padding-left: 0;
     display: inline-block;
 }
 
 .hearts li {
-	float: left;
+    float: left;
     list-style: none;
     display: inline-block;
 }
-/*
-.level {
-    float: left;
-    padding-left: 10px;
-}
-*/
 
 .hearts img {
 	width: 30px;
 }
+
 .hidden {
     opacity: 0.2;
 }
+
 .score-panel::after {
     clear: both;
 }
 
+/** player image displayed on end game modals **/
 .player-wrapper {
     width: 100%;
     height: 150px;
@@ -65,12 +63,13 @@ h1 {
 
 .player-happy {
     position: relative;
+    /* jumping player animation */
     -webkit-animation: linear infinite alternate;
     -webkit-animation-name: move;
     -webkit-animation-duration: 0.6s;
 }
 
-/** the end game modal styles **/
+/** start and end game modal styles **/
 
 .modal {
     display: none;
@@ -95,9 +94,11 @@ h1 {
     width: 50%;
     text-align: center;
 }
+
 #win .modal-content p {
     margin-top: 90px;
 }
+
 #win .modal-content h3 {
     padding-bottom: -60px;
     margin-bottom: -60px;
@@ -109,7 +110,6 @@ h1 {
     padding-right: 30px;
 }
 
-
 button {
     margin-top: 1vw;
     padding: 0.5em;
@@ -119,7 +119,7 @@ button {
     color: #EAE5D0;
 }
 
-/** keyframe **/
+/** animation keyframe **/
 
 @-webkit-keyframes move {
     0% {

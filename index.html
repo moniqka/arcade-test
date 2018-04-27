@@ -16,6 +16,7 @@
                 <li><img src="images/Heart.png" alt="heart"></li>
                 <li><img src="images/Heart.png" alt="heart"></li>
             </ul>
+            <!-- <div class="level"> Level: <span class="number">1</span></div> -->
             <!-- score -->
             <div class ="points">Your score: <span class="score">0</span></div>
         </section>
@@ -26,6 +27,9 @@
           <div class="modal-content">
               <h1>GAME OVER</h1>
               <h3>Sorry, you lost all lives...</h3>
+              <div class="player-wrapper">
+                  <img class="player-sad" src="images/char-boy-sad.png" alt="sad player">
+              </div>
               <p>Your score is: <span id="final-score"></span></p>
               <button id="restart-btn">Play Again</button>
           </div>
@@ -36,6 +40,9 @@
           <div class="modal-content">
               <h1>CONGRATULATIONS</h1>
               <h3>You won the game...</h3>
+              <div class="player-wrapper">
+                  <img class="player-happy" src="images/char-boy-happy.png" alt="sad player">
+              </div>
               <p>Your score is: <span id="win-score"></span></p>
               <button id="restart-btn2">Play Again</button>
           </div>

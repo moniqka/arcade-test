@@ -1,6 +1,10 @@
 body {
     text-align: center;
 }
+h1 {
+    color: #424cd6;
+}
+
 .container {
 	margin-top: 20px;
 	font-family: 'Press Start 2P', cursive;
@@ -12,7 +16,7 @@ body {
 /** styles for the score panel **/
 .score-panel {
     width: 505px;
-    margin-bottom: -60px;
+    margin-bottom: -80px;
     flex-direction: row;
 }
 .points {
@@ -32,6 +36,12 @@ body {
     list-style: none;
     display: inline-block;
 }
+/*
+.level {
+    float: left;
+    padding-left: 10px;
+}
+*/
 
 .hearts img {
 	width: 30px;
@@ -41,6 +51,23 @@ body {
 }
 .score-panel::after {
     clear: both;
+}
+
+.player-wrapper {
+    width: 100%;
+    height: 150px;
+    margin: auto;
+}
+
+.player-sad {
+    position: relative;
+}
+
+.player-happy {
+    position: relative;
+    -webkit-animation: linear infinite alternate;
+    -webkit-animation-name: move;
+    -webkit-animation-duration: 0.6s;
 }
 
 /** the end game modal styles **/
@@ -62,9 +89,39 @@ body {
     background-color: #fff;
     border-radius: 10px;
     margin: auto;
-    margin-top: 5vw;
+    margin-top: 9vw;
     padding-top: 2vw;
     padding-bottom: 3vw;
     width: 50%;
     text-align: center;
+}
+#win .modal-content p {
+    margin-top: 90px;
+}
+#win .modal-content h3 {
+    padding-bottom: -60px;
+    margin-bottom: -60px;
+}
+
+button {
+    margin-top: 1vw;
+    padding: 0.5em;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #424cd6;
+    color: #EAE5D0;
+}
+
+/** keyframe **/
+
+@-webkit-keyframes move {
+    0% {
+        top: 10%;
+    }
+    50% {
+        top: 50%;
+    }
+    100% {
+        top: 30%;
+    }
 }

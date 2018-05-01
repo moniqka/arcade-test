@@ -1,5 +1,3 @@
-
-
 let counter = document.querySelector('.score');
 let modal = document.getElementById('new-game');
 
@@ -8,7 +6,7 @@ class Enemy {
         this.sprite = 'images/enemy-bug.png';
         this.x = x;
         this.y = y;
-        // generates random speed
+        // generates random speed (function at the bottom of code)
         this.speed = getRandomInt(50, 300);
     }
 
@@ -53,7 +51,7 @@ class Player {
                 return true;
                 this.startPosition();
         } else {
-                return false;
+            return false;
         }
     }
 
@@ -69,7 +67,7 @@ class Player {
     hideHearts (e) {
         let livesPanel = document.querySelector('.hearts');
         let hearts = livesPanel.querySelectorAll('li');
-
+        // adding class to the list elements to "hide hearts"
         if (player.lives == 3) {
              livesPanel.lastElementChild.classList.add('hidden');
         } else if (player.lives == 2) { 
@@ -150,22 +148,24 @@ document.addEventListener('keyup', listen);
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min; 
 };
-
+// removes event listeners from "move keys"
 function removeListeners() {
     document.removeEventListener('keyup', listen);
 };
 
+// displays modal to start a game and initializes it after clicking the button
 function newGame() {
     modal.style.display = 'block';
     removeListeners();
     play();
-}
+};
 
 function play() {
     const restartBtn = document.querySelector('#play-btn'); 
-         restartBtn.addEventListener("click", function(){
-         modal.style.display = "none";
-         document.addEventListener('keyup', listen);
-         init();
-         });
+    restartBtn.addEventListener("click", function(){
+        modal.style.display = "none";
+        document.addEventListener('keyup', listen);
+        init();
+    });
+};
 }

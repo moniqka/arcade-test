@@ -45,7 +45,7 @@ var Engine = (function(global) {
          * computer is) - hurray time!
          */
         var now = Date.now(),
-            dt = (now - lastTime) / 1000.0;
+        dt = (now - lastTime) / 1000.0;
 
         /* Call our update/render functions, pass along the time delta to
          * our update function since it may be used for smooth animation.
@@ -128,8 +128,7 @@ var Engine = (function(global) {
              if (player.collision(player, enemy)) {
                  player.startPosition();
                  manageLives();
-
-             };
+             }
          }
      }
 
@@ -148,20 +147,20 @@ var Engine = (function(global) {
          playAgain();
      }
 
-     function playAgain(e){
+     function playAgain(e) {
          const restartBtn1 = document.querySelector('#restart-btn'); 
-         restartBtn1.addEventListener("click", function(){
+         restartBtn1.addEventListener("click", function() {
          modal1.style.display = "none";
          init();
          });
          const restartBtn2 = document.querySelector('#restart-btn2'); 
-         restartBtn2.addEventListener("click", function(){
+         restartBtn2.addEventListener("click", function() {
          modal2.style.display = "none";
          init();
          });
      } 
 
-     function winGame(e) {
+     function winGame() {
          if (player.y < 0 && player.points >= 100) {
              modal2.style.display = 'block';
              removeListeners();
@@ -169,7 +168,7 @@ var Engine = (function(global) {
              resetPosition();
              playAgain();
          }
-     }
+     };
 
     /* This function initially draws the "game level", it will then call
      * the renderEntities function. Remember, this function is called every

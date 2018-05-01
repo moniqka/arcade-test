@@ -167,5 +167,4 @@ function play() {
         document.addEventListener('keyup', listen);
         init();
     });
-};
 }

@@ -103,7 +103,7 @@ h1 {
     margin-bottom: -60px;
 }
 
-#instruction {
+.instruction {
     list-style: none;
     font-family: none;
     padding-right: 30px;

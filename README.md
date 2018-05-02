@@ -5,11 +5,11 @@ Game engine, basic art assets and starter code were provided by Udacity.
 
 ## Instruction
 
-You can play the game by opening this link https://moniqka.github.io/arcade-test/.
+You can play the game by opening this link https://moniqka.github.io/arcade-test/ or download here: https://github.com/moniqka/arcade-test.git and open it locally (on your computer). To do this you will need to unpack downloaded zip file, right click on index.html and open it in you favourite browser. 
 
 To start click on the "Play Game" button. Use the arrow keys on the keyboard to move (player can move in all directions)
 The objective of the game is to cross the road and avoid the bugs. Each time the plaer reaches water 10 points are added.
-To win the game the player needs to earn 100 points.
+To win the game the player needs to earn 100 points. Good Luck!
 
 ## Features
 

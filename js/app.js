@@ -25,7 +25,7 @@ class Enemy {
     render () {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
-};
+}
 
 class Player {
     constructor (x, y) {
@@ -43,13 +43,13 @@ class Player {
 
     // Collision Detection
     // from MDN https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection
-    collision (player, enemy) { 
+    collision (enemy) { 
         if (this.x < enemy.x + 80 &&
              this.x + 60 >enemy.x &&
              this.y < enemy.y + 60 &&
              70 + this.y > enemy.y) {
-                return true;
                 this.startPosition();
+                return true;
         } else {
             return false;
         }
@@ -61,16 +61,16 @@ class Player {
 
     updateScore () {
         this.points = this.points + 10;
-        counter.innerHTML = player.points;
+        counter.innerHTML = this.points;
     }
 
     hideHearts (e) {
         let livesPanel = document.querySelector('.hearts');
         let hearts = livesPanel.querySelectorAll('li');
         // adding class to the list elements to "hide hearts"
-        if (player.lives == 3) {
+        if (this.lives == 3) {
              livesPanel.lastElementChild.classList.add('hidden');
-        } else if (player.lives == 2) { 
+        } else if (this.lives == 2) { 
              livesPanel.lastElementChild.previousElementSibling.classList.add('hidden');
         } else { 
              livesPanel.firstElementChild.classList.add('hidden');
@@ -113,10 +113,10 @@ class Player {
                 this.x = 200;
                 this.y = 400;
             }, 500);
-            player.updateScore();
+            this.updateScore();
         }
     }
-};
+}
 
 const allEnemies =
     [
@@ -139,7 +139,7 @@ function listen(e) {
     };
 
     player.handleInput(allowedKeys[e.keyCode]);
-};
+}
 
 document.addEventListener('keyup', listen);
 
@@ -147,24 +147,23 @@ document.addEventListener('keyup', listen);
 // from stackoverflow https://stackoverflow.com/questions/1527803/generating-random-whole-numbers-in-javascript-in-a-specific-range
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min; 
-};
+}
 // removes event listeners from "move keys"
 function removeListeners() {
     document.removeEventListener('keyup', listen);
-};
+}
 
 // displays modal to start a game and initializes it after clicking the button
 function newGame() {
     modal.style.display = 'block';
     removeListeners();
     play();
-};
+}
 
 function play() {
     const restartBtn = document.querySelector('#play-btn'); 
     restartBtn.addEventListener("click", function(){
         modal.style.display = "none";
         document.addEventListener('keyup', listen);
-        init();
     });
 }

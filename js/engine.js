@@ -125,7 +125,7 @@ var Engine = (function(global) {
     function checkCollisions() {
          for (let i = 0; i < allEnemies.length; i++) {
              let enemy = allEnemies[i];
-             if (player.collision(player, enemy)) {
+             if (player.collision(enemy)) {
                  player.startPosition();
                  manageLives();
              }
